@@ -1,18 +1,17 @@
 package com.github.tvbox.osc.base;
 
-import android.app.Activity;
-import androidx.multidex.MultiDexApplication;
+ import androidx.multidex.MultiDexApplication;
 
 import com.github.tvbox.osc.bean.VodInfo;
 import com.github.tvbox.osc.callback.EmptyCallback;
 import com.github.tvbox.osc.callback.LoadingCallback;
 import com.github.tvbox.osc.data.AppDataManager;
 import com.github.tvbox.osc.server.ControlManager;
-import com.github.tvbox.osc.util.AppManager;
 import com.github.tvbox.osc.util.EpgUtil;
 import com.github.tvbox.osc.util.HawkConfig;
 import com.github.tvbox.osc.util.OkGoHelper;
 import com.github.tvbox.osc.util.PlayerHelper;
+import com.github.tvbox.osc.util.RemoteConfig;
 import com.github.tvbox.osc.util.js.JSEngine;
 import com.kingja.loadsir.core.LoadSir;
 import com.orhanobut.hawk.Hawk;
@@ -20,11 +19,8 @@ import com.orhanobut.hawk.Hawk;
 import me.jessyan.autosize.AutoSizeConfig;
 import me.jessyan.autosize.unit.Subunits;
 
-/**
- * @author pj567
- * @date :2020/12/17
- * @description:
- */
+
+
 public class App extends MultiDexApplication {
     private static App instance;
 
@@ -32,6 +28,7 @@ public class App extends MultiDexApplication {
     public void onCreate() {
         super.onCreate();
         instance = this;
+        RemoteConfig.Init(this);
         initParams();
         // OKGo
         OkGoHelper.init(); //台标获取
@@ -80,7 +77,4 @@ public class App extends MultiDexApplication {
         return this.vodInfo;
     }
 
-    public Activity getCurrentActivity() {
-        return AppManager.getInstance().currentActivity();
-    }
 }
