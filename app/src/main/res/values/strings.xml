@@ -1,4 +1,7 @@
 <resources>
-    <!--  app名称   -->
-    <string name="app_name">TVBox</string>
+    <string name="app_name">Lion Movies</string>
+    <string name="diy_pri">私人影院定制服务</string>
+    <string name="diy_ads">专注礼品定制：1、金、银礼品定制（金银章、金银条、金银钞等）；2、 钱币收藏（建国钞、奥运钞等纪念钞，第二、三、四套人民币，生日钞）。详情咨询（微信）：rcgold，或扫码右上方二维码。</string>
+    <string name="diy_about">\n1、定制属于自己的追剧神器。\n2、软件图标、名称、背景显示等自定义更换。\n3、提供去广告服务。\n4、技术支持微信：rcgold\n5、本软件可安装在Android手机、平板、电视盒子和网络电视上使用。\n\n所有资源来自网络，本软件只提供聚合展示功能，不参与任何视频的制作、 上传、 储存、下载等侵权行为。软件仅供学习参考,不得用于商业用途，请于安装后24小时内删除。</string>
+
 </resources>
