@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+     <androidx.core.widget.NestedScrollView
+        android:layout_width="310dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="10dp"
+        android:fillViewport="true"
+        android:overScrollMode="never">   
+        
+        <RelativeLayout
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/shape_dialog_update"
+            android:paddingBottom="10dp">
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:text="DweiTV信息发布"
+                android:textColor="@color/color_FFFFFF"
+                android:textSize="20sp" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/title"
+                android:background="#4a7acd" />
+
+            <TextView
+                android:id="@+id/log_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:id="@+id/msg_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/log_head"
+                android:autoLink="web"
+                android:linksClickable="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:text="信息内容"
+                android:textColor="@color/color_FFFFFF"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/msg_tv"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/yes_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:background="#509296"
+                    android:gravity="center"
+                    android:text="软件更新"
+                    android:textColor="@color/color_FFFFFF"
+                    android:textSize="16sp" />
+
+                <Button
+                android:id="@+id/no_btn"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="#509296"
+                android:gravity="center"
+                android:text="返回主页"
+                android:textColor="@color/color_FFFFFF"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/radius_10"
+            android:layout_alignBottom="@id/msg_tv"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="-30dp"
+            android:max="100"
+            android:progress="0" />
+
+        <TextView
+            android:id="@+id/progressBarText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/msg_tv"
+            android:layout_marginLeft="140dp"
+            android:layout_marginBottom="-28dp"
+            android:text="0%" />
+    </RelativeLayout>
+        
+ </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
