@@ -255,9 +255,9 @@ public class HomeActivity extends BaseActivity {
     private void initData() {
         SourceBean home = ApiConfig.get().getHomeSourceBean();
         if (home != null && home.getName() != null && !home.getName().isEmpty())
-            {if(home.getName()=="DweiTV"){
+            {if(home.getName()=="LionMovies"){
             tvName.setText(home.getName());}
-         else{tvName.setText("DweiTV>>"+home.getName());
+         else{tvName.setText("LionMovies>>"+home.getName());
              }
         }
             //tvName.setText(home.getName());
@@ -282,7 +282,7 @@ public class HomeActivity extends BaseActivity {
                             @Override
                             public void run() {
                                 if (!useCacheConfig)
-                                    Toast.makeText(HomeActivity.this, "Dwei提示：配置加载成功", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(HomeActivity.this, "系统配置加载完成", Toast.LENGTH_SHORT).show();
                                 initData();
                             }
                         }, 50);
@@ -299,7 +299,7 @@ public class HomeActivity extends BaseActivity {
                         mHandler.post(new Runnable() {
                             @Override
                             public void run() {
-                                Toast.makeText(HomeActivity.this, "Dwei提示：配置加载失败请检查网络", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(HomeActivity.this, "配置加载失败，请重试", Toast.LENGTH_SHORT).show();
                                 initData();
                             }
                         });
