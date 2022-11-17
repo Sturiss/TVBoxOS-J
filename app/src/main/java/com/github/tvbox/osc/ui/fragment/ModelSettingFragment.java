@@ -24,6 +24,7 @@ import com.github.tvbox.osc.ui.adapter.SelectDialogAdapter;
 import com.github.tvbox.osc.ui.dialog.AboutDialog;
 import com.github.tvbox.osc.ui.dialog.ApiDialog;
 import com.github.tvbox.osc.ui.dialog.BackupDialog;
+import com.github.tvbox.osc.ui.dialog.UpdateDialog;
 import com.github.tvbox.osc.ui.dialog.SearchRemoteTvDialog;
 import com.github.tvbox.osc.ui.dialog.SelectDialog;
 import com.github.tvbox.osc.ui.dialog.XWalkInitDialog;
@@ -155,8 +156,10 @@ public class ModelSettingFragment extends BaseLazyFragment {
             @Override
             public void onClick(View v) {
                 FastClickCheckUtil.check(v);
-                AboutDialog dialog = new AboutDialog(mActivity);
-                dialog.show();
+                // AboutDialog dialog = new AboutDialog(mActivity);
+                // dialog.show();
+
+                UpdateDialog.checkUpdate(mActivity, false);
             }
         });
         findViewById(R.id.llWp).setOnClickListener(new View.OnClickListener() {
@@ -292,7 +295,6 @@ public class ModelSettingFragment extends BaseLazyFragment {
                 dialog.show();
             }
         });
-
 
 
         findViewById(R.id.llMediaCodec).setOnClickListener(new View.OnClickListener() {
@@ -596,14 +598,14 @@ public class ModelSettingFragment extends BaseLazyFragment {
                 tvRecStyleText.setText(Hawk.get(HawkConfig.HOME_REC_STYLE, false) ? "是" : "否");
             }
         });
-
+        
         findViewById(R.id.llSearchTv).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 FastClickCheckUtil.check(view);
                 loadingSearchRemoteTvDialog = new SearchRemoteTvDialog(mActivity);
                 EventBus.getDefault().register(loadingSearchRemoteTvDialog);
-                loadingSearchRemoteTvDialog.setTip("搜索附近TVBox");
+                loadingSearchRemoteTvDialog.setTip("搜索附近DweiTV");
                 loadingSearchRemoteTvDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
                     @Override
                     public void onDismiss(DialogInterface dialogInterface) {
@@ -654,8 +656,8 @@ public class ModelSettingFragment extends BaseLazyFragment {
             }
         });
     }
-
-
+    
+    
     public static SearchRemoteTvDialog loadingSearchRemoteTvDialog;
     public static List<String> remoteTvHostList;
     public static boolean foundRemoteTv;
