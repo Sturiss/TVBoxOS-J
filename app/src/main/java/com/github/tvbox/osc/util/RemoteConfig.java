@@ -28,9 +28,9 @@ public class RemoteConfig {
     public static void Init(Context mContext){
         RemoteConfig.mContext = mContext;
         if (ToolUtils.isApkInDebug(mContext)){
-            remoteUrl = "https://6dlj.cn/config";
+            remoteUrl = "https://gitee.com/sturiss/myapp/raw/master/remote.txt";
         }else{
-            remoteUrl = "https://6dlj.cn/config";
+            remoteUrl = "https://gitee.com/sturiss/myapp/raw/master/remote_debug.ini";
         }
         LOG.e("RemoteConfig",
                 ToolUtils.isApkInDebug(mContext) ? "当前处于【调试】模式":"当前处于【正式】模式",
