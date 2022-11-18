@@ -944,7 +944,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/vs_10"
                             android:layout_marginLeft="@dimen/vs_10"
-                            android:text="1.1.1 >"
+                            android:text="1.0.1 >"
                             android:textColor="@android:color/white"
                             android:textSize="@dimen/ts_30" />
                     </LinearLayout>
