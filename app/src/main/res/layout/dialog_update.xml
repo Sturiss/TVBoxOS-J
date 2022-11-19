@@ -5,7 +5,7 @@
 
      <androidx.core.widget.NestedScrollView
         android:layout_width="310dp"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:paddingBottom="10dp"
         android:fillViewport="true"
@@ -68,28 +68,28 @@
 
                 <Button
                     android:id="@+id/yes_btn"
-                    android:layout_width="0dp"
-                    android:layout_height="35dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginRight="60dp"
                     android:layout_weight="1"
                     android:background="#509296"
                     android:gravity="center"
-                    android:text="更新"
+                    android:text="更 新"
                     android:textColor="@color/color_FFFFFF"
-                    android:textSize="16sp" />
+                    android:textSize="18sp" />
 
                 <Button
                 android:id="@+id/no_btn"
-                android:layout_width="0dp"
-                android:layout_height="35dp"
-                android:layout_marginRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="40dp"
                 android:layout_weight="1"
                 android:background="#509296"
                 android:gravity="center"
-                android:text="返回"
+                android:text="返 回"
                 android:textColor="@color/color_FFFFFF"
-                android:textSize="16sp" />
+                android:textSize="18sp" />
         </LinearLayout>
 
         <ProgressBar
@@ -99,7 +99,7 @@
             android:layout_height="@dimen/radius_10"
             android:layout_alignBottom="@id/msg_tv"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="-30dp"
+            android:layout_marginBottom="-20dp"
             android:max="100"
             android:progress="0" />
 
