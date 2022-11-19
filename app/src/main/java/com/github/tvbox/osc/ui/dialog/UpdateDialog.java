@@ -81,8 +81,8 @@ public class UpdateDialog extends BaseDialog  {
         }
         log_head = findViewById(R.id.log_head);
         msg_tv = findViewById(R.id.msg_tv);
-        log_head.setText("LionMovies更新：");
-        //log_head.setText("v" + NewVersion + "提示：");
+        //log_head.setText("LionMovies更新：");
+        log_head.setText("LionMovies" + NewVersion + "更新：");
         msg_tv.setText(UpdateDesc);
         update = findViewById(R.id.yes_btn);
         notNow = findViewById(R.id.no_btn);
